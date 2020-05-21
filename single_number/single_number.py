@@ -14,6 +14,25 @@ def single_number(arr):
     
     return -1
 
+def dict_single_number(arr):
+    counts = {}
+    for x in arr:
+        if x in counts:
+            counts[x] += 1
+        else:
+            counts[x] = 1
+    for num in counts:
+        if counts[num] == 1:
+            return num
+
+def arr_single_number(arr):
+    no_dupes = []
+    for i in arr:
+        if i not in no_dupes:
+            no_dupes.append(x)
+        else:
+            no_dupes.remove(i)
+    return no_dupes[0]
 
 
 if __name__ == '__main__':
